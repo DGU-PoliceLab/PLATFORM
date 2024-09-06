@@ -8,7 +8,6 @@ from datetime import datetime
 from db.config import config_redis, config_mysql
 from util.time import timestamp
 
-
 class MysqlDB():
 
     def __init__(self):

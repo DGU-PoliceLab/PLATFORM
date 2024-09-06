@@ -15,6 +15,8 @@
 
 ![PoliceLab 2.0](/resource/introduction.png)
 
+> WEB(UI) 관련 설명은 [이곳](https://github.com/DGU-PoliceLab/PLATFORM/blob/main/ui/README.md)을 참조하세요.
+
 ## 주요기능
 
 TODO
