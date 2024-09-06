@@ -1,0 +1,17 @@
+#rootLayout {
+    display: flex;
+    flex-direction: column;
+    width: 100svw;
+    min-height: 100svh;
+    max-height: 100svh;
+}
+
+#rootLayout > .headerContainer {
+    height: 4rem;
+}
+
+#rootLayout > .contentContainer {
+    height: calc(100svh - 4rem);
+    max-height: calc(100svh - 4rem);
+    overflow: hidden;
+}

@@ -1,0 +1,114 @@
+#eventList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    overflow: scroll;
+}
+
+#eventList > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#eventList > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#eventList > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#eventList > .tableWrap {
+    flex: 1;
+    width: 100%;
+    min-width: fit-content;
+    max-height: calc(100svh - 282px);
+    border: 1px solid var(--table-border);
+    border-radius: var(--table-radius);
+    overflow: auto;
+}
+
+#eventList > .tableWrap > .eventTable {
+    width: 100%;
+    min-width: fit-content;
+    height: min-content;
+    background-color: var(--table);
+    border-collapse: collapse;
+}
+#eventList > .tableWrap > .eventTable > tr > th {
+    position: sticky;
+    top: 0px;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    background-color: var(--table-header);
+    border-bottom: 1px solid var(--table-border);
+}
+
+#eventList > .tableWrap > .eventTable > tr > td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+#eventList > .tableWrap > .eventTable > tr:nth-child(2n) {
+    background-color: var(--table-highlight);
+}
+#eventList > .tableWrap > .eventTable .location {
+    width: 10%;
+    min-width: 160px;
+}
+#eventList > .tableWrap > .eventTable .time,
+#eventList > .tableWrap > .eventTable .check {
+    width: 10%;
+    min-width: 200px;
+}
+
+#eventList > .tableWrap > .eventTable .type {
+    width: 10%;
+    min-width: 160px;
+}
+
+#eventList > .tableWrap > .eventTable .detail {
+    padding: 0.75rem 0;
+    width: 1%;
+    min-width: 180px;
+}
+
+#eventList > .tableWrap > .eventTable .dummy {
+    width: 100%;
+    min-width: 0;
+}
+
+#eventList > .pageControlWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#eventList > .pageControlWrap > .pageController {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#eventList > .pageControlWrap > .pageController > .indicatorWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#eventList > .pageControlWrap > .pageController > .indicatorWrap > .indicator {
+    min-width: 2.5rem;
+}

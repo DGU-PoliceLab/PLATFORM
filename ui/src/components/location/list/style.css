@@ -1,0 +1,85 @@
+#locationList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    overflow: scroll;
+}
+
+#locationList > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#locationList > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#locationList > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#locationList > .tableWrap {
+    flex: 1;
+    width: 100%;
+    min-width: fit-content;
+    max-height: calc(100svh - 154px);
+    border: 1px solid var(--table-border);
+    border-radius: var(--table-radius);
+    overflow: auto;
+}
+
+#locationList > .tableWrap > .locationTable {
+    width: 100%;
+    min-width: fit-content;
+    background-color: var(--table);
+    border-collapse: collapse;
+}
+
+#locationList > .tableWrap > .locationTable > tr > th {
+    position: sticky;
+    top: 0px;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    background-color: var(--table-header);
+    border-bottom: 1px solid var(--table-border);
+}
+
+#locationList > .tableWrap > .locationTable > tr > td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+#locationList > .tableWrap > .locationTable > tr:nth-child(2n) {
+    background-color: var(--table-highlight);
+}
+#locationList > .tableWrap > .locationTable .id {
+    width: 5%;
+    min-width: 40px;
+}
+
+#locationList > .tableWrap > .locationTable .name {
+    width: 47%%;
+    min-width: 140px;
+}
+
+#locationList > .tableWrap > .locationTable .name {
+    width: 47%%;
+    min-width: 140px;
+}
+
+#locationList > .tableWrap > .locationTable .rename,
+#locationList > .tableWrap > .locationTable .delete {
+    padding: 0.75rem 0;
+    width: 1%;
+    min-width: 80px;
+    max-width: 80px;
+}

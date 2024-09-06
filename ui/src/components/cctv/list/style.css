@@ -1,0 +1,89 @@
+#cctvList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    overflow: scroll;
+}
+
+#cctvList > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#cctvList > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#cctvList > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#cctvList > .tableWrap {
+    flex: 1;
+    width: 100%;
+    min-width: fit-content;
+    max-height: calc(100svh - 154px);
+    border: 1px solid var(--table-border);
+    border-radius: var(--table-radius);
+    overflow: auto;
+}
+
+#cctvList > .tableWrap > .cctvTable {
+    width: 100%;
+    min-width: fit-content;
+    background-color: var(--table);
+    border-collapse: collapse;
+}
+
+#cctvList > .tableWrap > .cctvTable > tr > th {
+    position: sticky;
+    top: 0px;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    background-color: var(--table-header);
+    border-bottom: 1px solid var(--table-border);
+}
+
+#cctvList > .tableWrap > .cctvTable > tr > td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+#cctvList > .tableWrap > .cctvTable > tr:nth-child(2n) {
+    background-color: var(--table-highlight);
+}
+#cctvList > .tableWrap > .cctvTable .id {
+    width: 5%;
+    min-width: 40px;
+}
+
+#cctvList > .tableWrap > .cctvTable .name {
+    width: 20%;
+    min-width: 140px;
+}
+
+#cctvList > .tableWrap > .cctvTable .url {
+    width: 35%;
+    min-width: 300px;
+}
+
+#cctvList > .tableWrap > .cctvTable .createat {
+    width: 20%;
+    min-width: 240px;
+}
+#cctvList > .tableWrap > .cctvTable .rename,
+#cctvList > .tableWrap > .cctvTable .delete {
+    padding: 0.75rem 0;
+    width: 1%;
+    min-width: 80px;
+    max-width: 80px;
+}

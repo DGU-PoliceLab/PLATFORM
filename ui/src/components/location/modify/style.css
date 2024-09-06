@@ -1,0 +1,76 @@
+#locationModify {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    overflow: scroll;
+}
+
+#locationModify > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#locationModify > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#locationModify > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#locationModify > .footerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#locationModify > .footerWrap > button:nth-child(1) {
+    flex: 3;
+}
+
+#locationModify > .footerWrap > button:nth-child(2) {
+    flex: 1;
+}
+
+#locationModify > .inputDataWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+#locationModify > .inputDataWrap > .inputGroupWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#locationModify > .inputDataWrap > .inputGroupWrap > .title {
+    font-size: 0.875rem;
+    color: var(--text-1);
+}
+
+#locationModify > .inputDataWrap > .inputGroupWrap > .inputWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+#locationModify > .inputDataWrap > .inputGroupWrap > .inputWrap > input {
+    flex: 1;
+}
+
+#locationModify > .inputDataWrap > .inputGroupWrap > .inputWrap > button {
+    width: 120px;
+}

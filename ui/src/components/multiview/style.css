@@ -1,0 +1,94 @@
+#multiview {
+    display: flex;
+    flex-direction: column;
+}
+
+#multiview > .controllerWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: .25rem 0;
+}
+
+#multiview > .controllerWrap > select {
+    width: 160px;
+    max-width: 160px;
+}
+
+#multiview > .multiviewWrap {
+    display: grid;
+}
+
+#multiview > .multiviewWrap.size1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+#multiview > .multiviewWrap.size2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+#multiview > .multiviewWrap.size3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+#multiview > .multiviewWrap.size4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#multiview > .multiviewWrap > .view {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.375rem;
+    width: 100%;
+    background-color: var(--background);
+    border-radius: var(--view-radius);
+}
+
+#multiview > .multiviewWrap > .view.active {
+    background-color: var(--danger);
+}
+
+#multiview > .multiviewWrap > .view > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    height: 1.5rem;
+}
+
+#multiview > .multiviewWrap > .view > .headerWrap > .title {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--col-gray-scale-8);
+}
+
+#multiview > .multiviewWrap > .view > .headerWrap > .detailWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    transition: 0.25s;
+}
+#multiview > .multiviewWrap > .view > .headerWrap > .detailWrap > svg {
+    color: var(--col-gray-scale-9);
+    transition: 0.25s;
+}
+
+#multiview > .multiviewWrap > .view > .headerWrap > .detailWrap:hover {
+    background-color: var(--col-gray-scale-9);
+}
+
+#multiview > .multiviewWrap > .view > .headerWrap > .detailWrap:hover > svg {
+    color: var(--col-gray-scale-0);
+}
+
+#multiview > .multiviewWrap > .view.active > .headerWrap > .detailWrap:hover > svg {
+    color: var(--danger);
+}
+
+#multiview > .multiviewWrap > .view > .contentWrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}

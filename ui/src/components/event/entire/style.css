@@ -1,0 +1,90 @@
+#entireEventList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: hidden;
+}
+
+#entireEventList > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#entireEventList > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#entireEventList > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#entireEventList > .eventWrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    max-height: calc(100svh - 130px);
+    overflow: scroll;
+}
+
+#entireEventList > .eventWrap > .eventItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+}
+
+#entireEventList > .eventWrap > .eventItem:hover {
+    background-color: var(--card-hover);
+}
+
+#entireEventList > .eventWrap > .eventItem.active {
+    background-color: var(--danger-foreground);
+    border: 1px solid var(--danger);
+}
+
+#entireEventList > .eventWrap > .eventItem > .descWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#entireEventList > .eventWrap > .eventItem .dataWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+#entireEventList > .eventWrap > .eventItem .dataWrap > .title {
+    color: var(--col-gray-scale-7);
+}
+#entireEventList > .eventWrap > .eventItem.active .dataWrap > .title {
+    color: var(--danger-text);
+}
+#entireEventList > .eventWrap > .eventItem .dataWrap > .content {
+}
+#entireEventList > .eventWrap > .eventItem.active .dataWrap > .content {
+    color: var(--danger-text);
+}
+
+#entireEventList > .eventWrap > .eventItem .typeWrap {
+    font-size: 1.25rem;
+}
+#entireEventList > .eventWrap > .eventItem .typeWrap > .content {
+    font-weight: 600;
+}

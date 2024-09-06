@@ -1,0 +1,76 @@
+#cctvDelete {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    overflow: scroll;
+}
+
+#cctvDelete > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#cctvDelete > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#cctvDelete > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#cctvDelete > .footerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#cctvDelete > .footerWrap > button:nth-child(1) {
+    flex: 3;
+}
+
+#cctvDelete > .footerWrap > button:nth-child(2) {
+    flex: 1;
+}
+
+#cctvDelete > .inputDataWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+#cctvDelete > .inputDataWrap > .inputGroupWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#cctvDelete > .inputDataWrap > .inputGroupWrap > .title {
+    font-size: 0.875rem;
+    color: var(--text-1);
+}
+
+#cctvDelete > .inputDataWrap > .inputGroupWrap > .inputWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+#cctvDelete > .inputDataWrap > .inputGroupWrap > .inputWrap > input {
+    flex: 1;
+}
+
+#cctvDelete > .inputDataWrap > .inputGroupWrap > .inputWrap > button {
+    width: 120px;
+}

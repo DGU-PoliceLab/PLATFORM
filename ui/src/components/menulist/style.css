@@ -1,0 +1,45 @@
+#menuList {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100svw;
+    height: 100svh;
+    background-color: var(--dimmed);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: 0.3s;
+    user-select: none;
+}
+
+#menuList.active {
+    opacity: 1;
+}
+
+#menuList > .menuWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-right: 6rem;
+    transform: translateX(100%);
+    transition: 0.5s;
+}
+#menuList > .menuWrap.active {
+    transform: translateX(0);
+}
+
+#menuList > .menuWrap > .menuItem {
+    font-size: 4rem;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+#menuList > .menuWrap > .menuItem:hover {
+    opacity: 1;
+}

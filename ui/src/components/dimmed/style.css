@@ -1,0 +1,26 @@
+.dimmed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100svw;
+    height: 100svh;
+    background-color: var(--dimmed);
+    backdrop-filter: blur(1px);
+    user-select: none;
+}
+
+.dimmed > .componentConatiner {
+    padding: 1.5rem;
+    width: calc(100svw - 2rem);
+    height: fit-content;
+    max-width: 480px;
+    max-height: calc(100svh - 2rem);
+    background-color: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+}

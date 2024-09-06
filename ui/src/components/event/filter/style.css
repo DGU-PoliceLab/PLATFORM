@@ -1,0 +1,193 @@
+.eventFilter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.eventFilter > .optionWrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
+.eventFilter > .optionWrap > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.eventFilter > .optionWrap > .headerWrap > svg {
+    width: 1rem;
+    height: 1rem;
+    color: var(--text-2);
+}
+
+.eventFilter > .optionWrap > .headerWrap > p {
+    color: var(--text-2);
+}
+
+.eventFilter > .optionWrap > .optWrap {
+    position: relative;
+}
+
+.eventFilter > .optionWrap > .optWrap > input {
+    display: none;
+}
+
+.eventFilter > .optionWrap > .optWrap > input + label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--btn-1);
+    border: 1px solid var(--btn-1-border);
+}
+.eventFilter > .optionWrap > .optWrap > input + label + .dropDownWrap {
+    display: none;
+    z-index: 101;
+}
+.eventFilter > .optionWrap > .optWrap > input:checked + label + .dropDownWrap {
+    display: flex;
+}
+
+.eventFilter > .optionWrap > .optWrap > input + label > svg {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.eventFilter > .optionWrap > .optWrap > input + label:hover {
+    background-color: var(--btn-1-hover);
+    border: 1px solid var(--btn-1-hover-border);
+}
+
+.eventFilter > .optionWrap > .optWrap > input + label.active {
+    background-color: var(--btn-3);
+    border: 1px solid var(--btn-3-border);
+    color: var(--text-9);
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap {
+    position: absolute;
+    left: 0;
+    top: 3.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0.375rem;
+    min-width: 14rem;
+    background-color: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap.datetime {
+    flex-direction: column;
+    width: 30rem;
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap.datetime > div {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap.datetime > .detailWrap {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--card-border);
+    max-height: 5.5rem;
+}
+
+.eventFilter
+    > .optionWrap
+    > .optWrap
+    > .dropDownWrap.datetime
+    > .detailWrap
+    > span {
+    margin-top: 2.5rem;
+}
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap.datetime > div > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap.datetime > div > div > p {
+    margin-bottom: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--text-2);
+}
+
+.eventFilter
+    > .optionWrap
+    > .optWrap
+    > .dropDownWrap.datetime
+    > div
+    input.datePicker {
+    width: 100%;
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap > .summaryWrap {
+    border-bottom: 1px solid var(--card-border);
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap > .summaryWrap > p {
+    margin-bottom: 0.875rem;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-2);
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap > input {
+    display: none;
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap > input + label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.675rem;
+    background-color: var(--card);
+    border: 1px solid var(--card);
+    border-radius: 0.25rem;
+    text-align: center;
+    color: var(--text-0);
+    transition: 0.2s;
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap > input + label:hover {
+    background-color: var(--btn-1-hover);
+    border: 1px solid var(--btn-1-hover-border);
+}
+
+.eventFilter > .optionWrap > .optWrap > .dropDownWrap > input + label > svg {
+    width: 1rem;
+    height: 1rem;
+    stroke-width: 2.5;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.eventFilter
+    > .optionWrap
+    > .optWrap
+    > .dropDownWrap
+    > input:checked
+    + label
+    > svg {
+    opacity: 1;
+}
+
+.eventFilter > .selectedWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}

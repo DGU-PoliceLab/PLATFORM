@@ -1,0 +1,87 @@
+#partialEventList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
+
+#partialEventList > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#partialEventList > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#partialEventList > .headerWrap > .funcWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#partialEventList > .tableWrap {
+    flex: 1;
+    width: 100%;
+    min-width: fit-content;
+    height: 100%;
+    border: 1px solid var(--table-border);
+    border-radius: var(--table-radius);
+    overflow: auto;
+}
+
+#partialEventList > .tableWrap > .eventTable {
+    width: 100%;
+    height: 100%;
+    min-width: fit-content;
+    height: min-content;
+    background-color: var(--table);
+    border-collapse: collapse;
+}
+
+#partialEventList > .tableWrap > .eventTable > tr > th {
+    position: sticky;
+    top: 0px;
+    padding: 1rem;
+    text-align: left;
+    border: none;
+    background-color: var(--table-header);
+    border-bottom: 1px solid var(--table-border);
+}
+
+#partialEventList > .tableWrap > .eventTable > tr > td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+#partialEventList > .tableWrap > .eventTable > tr:nth-child(2n) {
+    background-color: var(--table-highlight);
+}
+#partialEventList > .tableWrap > .eventTable .time,
+#partialEventList > .tableWrap > .eventTable .check {
+    width: 15%;
+    min-width: 200px;
+}
+
+#partialEventList > .tableWrap > .eventTable .type {
+    width: 15%;
+    min-width: 100px;
+}
+
+#partialEventList > .tableWrap > .eventTable .detail {
+    padding: 0.75rem 0;
+    width: 1%;
+    min-width: 180px;
+}
+
+#partialEventList > .tableWrap > .eventTable .dummy {
+    width: 100%;
+    min-width: 0;
+}

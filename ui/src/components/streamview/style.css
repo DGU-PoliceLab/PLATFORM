@@ -1,0 +1,36 @@
+.streamView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background-color: var(--stream-view);
+    border-radius: var(--stream-view-radius);
+    overflow: hidden;
+    user-select: none;
+}
+
+.streamView > p {
+    font-size: 2rem;
+}
+
+.streamView > .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    translate: -50% -50%;
+    animation: Spin 1.5s infinite;
+    z-index: 0;
+}
+
+.streamView > img {
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    user-select: none;
+}

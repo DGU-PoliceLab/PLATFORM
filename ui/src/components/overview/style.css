@@ -1,0 +1,152 @@
+#overview {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: hidden;
+    width: 100%;
+    user-select: none;
+}
+
+#overview > .headerWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+#overview > .headerWrap > .title {
+    flex: 1;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#overview > .viewWrap {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    width: 100%;
+    height: 100%;
+}
+
+#overview > .viewWrap > .noData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+}
+
+#overview > .viewWrap > .noData > svg {
+    width: 4rem;
+    height: 4rem;
+    stroke-width: 1.25;
+}
+
+#overview > .viewWrap > .view {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-right: 0.75rem;
+    width: 220px;
+    height: 100%;
+    border-right: 1px solid var(--border);
+}
+
+#overview > .viewWrap > .view:last-child {
+    border-right: none;
+}
+
+#overview > .viewWrap > .view > .thumbWrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+#overview > .viewWrap > .view > .thumbWrap > .thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 1px solid var(--border);
+    border-radius: var(--view-radius);
+    color: var(--text-0);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#overview > .viewWrap > .view > .thumbWrap > .thumbToilet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    border: 1px solid var(--border);
+    border-radius: var(--view-radius);
+    color: var(--text-0);
+}
+
+#overview > .viewWrap > .view > .contentWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#overview > .viewWrap > .view > .contentWrap > .dataWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#overview > .viewWrap > .view > .contentWrap > .dataWrap > svg {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: white;
+}
+
+#overview > .viewWrap > .view > .contentWrap > .dataWrap > span {
+    margin-right: 0.125rem;
+    color: var(--text-2);
+}
+
+#overview > .viewWrap > .view > .contentWrap > .dataWrap > .value {
+    font-weight: 600;
+    color: var(--text-0);
+}
+
+#overview > .viewWrap > .view > .contentWrap > .barWrap {
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--msg);
+    border: 1px solid var(--msg-border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+#overview > .viewWrap > .view > .contentWrap > .barWrap > .bar {
+    height: 100%;
+    transition: 2s;
+}
+#overview > .viewWrap > .view > .contentWrap > .barWrap > .bar.step0 {
+    width: 10%;
+    background-color: var(--text-0);
+    border-right: 1px solid var(--text-1);
+}
+#overview > .viewWrap > .view > .contentWrap > .barWrap > .bar.step1 {
+    width: 55%;
+    background-color: var(--danger-foreground);
+    border-right: 1px solid var(--danger-text);
+}
+#overview > .viewWrap > .view > .contentWrap > .barWrap > .bar.step2 {
+    width: 100%;
+    background-color: var(--danger);
+    border-right: 1px solid var(--danger-text);
+}
