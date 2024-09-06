@@ -18,15 +18,18 @@ class ClipManager:
         self.recording_done_event = threading.Event()
         self.thread = threading.Thread(target=self.update_buffer)
         self.thread.daemon = True
+        self.frame = None
         self.thread.start()
 
     def update_buffer(self):
         while True:
             ret, frame = self.cap.read()
             if not ret:
-                break
+                print("Camera connection error, using cached frame...")
+                self.buffer.append(self.frame)
+            self.frame = frame
             with self.lock:
-                self.buffer.append(frame)
+                self.buffer.append(self.frame)
             if self.recording_event.is_set():
                 self.recording_done_event.set()
             time.sleep(1 / self.fps)
