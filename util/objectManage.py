@@ -2,7 +2,7 @@ import os
 import cv2
 import pickle
 from db.controller import RedisDB
-from utils.snapshot import snapshot
+from util.snapshot import snapshot
 
 class ObjectManager():
 

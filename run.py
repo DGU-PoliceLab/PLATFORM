@@ -7,20 +7,20 @@ import base64
 import asyncio
 import redis.asyncio as aioredis
 from db.controller import MysqlDB, RedisDB, RedisMQ, SocketManager
-from services import cctv as Cctv
-from services import event as Event
-from services import location as Location
-from services import rtsp as RTSP
-from services import log as Log
-from services import snap as Snap
-from models.log import LogReadModel, LogCheckModel
-from models.cctv import CctvCreateModel, CctvCheckModel, CctvUpdateModel, CctvDeleteModel
-from models.location import LocationCreateModel, LocationCheckModel, LocationUpdateModel, LocationDeleteModel
-from models.event import EventCreateModel, EventReadModel, EventUpdateModel, EventDeleteModel
-from models.message import MessageSendModel, MessageRecvModel
-from models.rtsp import RtspSnapModel
-from models.snap import SnapReadModel, SnapUpdateModel
-from utils.clip import clipGroup
+from service import cctv as Cctv
+from service import event as Event
+from service import location as Location
+from service import rtsp as RTSP
+from service import log as Log
+from service import snap as Snap
+from model.log import LogReadModel, LogCheckModel
+from model.cctv import CctvCreateModel, CctvCheckModel, CctvUpdateModel, CctvDeleteModel
+from model.location import LocationCreateModel, LocationCheckModel, LocationUpdateModel, LocationDeleteModel
+from model.event import EventCreateModel, EventReadModel, EventUpdateModel, EventDeleteModel
+from model.message import MessageSendModel, MessageRecvModel
+from model.rtsp import RtspSnapModel
+from model.snap import SnapReadModel, SnapUpdateModel
+from util.clip import clipGroup
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -30,7 +30,7 @@ redis_client = aioredis.from_url("redis://localhost:50001")
 mq = RedisMQ()
 socketManager = SocketManager()
 # clipManagers = clipGroup()
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="template")
 
 origins = [
     "*"

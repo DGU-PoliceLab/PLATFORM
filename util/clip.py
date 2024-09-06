@@ -5,7 +5,7 @@ import time
 import base64
 from datetime import datetime
 from collections import deque
-from services.location import read_with_cctv
+from service.location import read_with_cctv
 
 class ClipManager:
     def __init__(self, rtsp_url, fps=30):

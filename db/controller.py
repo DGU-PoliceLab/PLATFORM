@@ -6,7 +6,7 @@ from fastapi import WebSocket
 from threading import Thread
 from datetime import datetime
 from db.config import config_redis, config_mysql
-from utils.time import timestamp
+from util.time import timestamp
 
 
 class MysqlDB():

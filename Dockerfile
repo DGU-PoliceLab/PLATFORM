@@ -29,4 +29,4 @@ RUN pip install python-dotenv
 EXPOSE 40000
 
 # 애플리케이션 실행
-CMD ["hypercorn", "run:app", "-c", "hypercorn_config.py", "--reload"]
+CMD ["hypercorn", "run:app", "-c", "hypercorn_config.py"]
