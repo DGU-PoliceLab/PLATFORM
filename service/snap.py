@@ -1,4 +1,4 @@
-from utils.object import ObjectManager
+from util.object import ObjectManager
 
 objectManager = ObjectManager()
 

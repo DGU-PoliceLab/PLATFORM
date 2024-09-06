@@ -1,5 +1,5 @@
 from datetime import datetime as dt
-from utils.time import now
+from util.time import now
 from db.controller import MysqlDB
 
 def read(datetime = [], locations = [], types = []):
