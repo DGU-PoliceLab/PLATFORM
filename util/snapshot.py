@@ -2,6 +2,7 @@ import os
 import cv2
 import uuid
 
+# RTSP로부터 스냅샷을 촬영하는 함수
 def snapshot(url, data):
     try:
         save_path = "./static/snap"

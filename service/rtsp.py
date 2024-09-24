@@ -1,6 +1,7 @@
 import cv2
 import time
 
+# RTSP 스트림을 가져오는 함수
 def getRtspStream(url):
     while True:
         # RTSP 스트림 시도
@@ -14,6 +15,7 @@ def getRtspStream(url):
 
         print("RTSP stream connected.")
 
+        # 프레임을 읽어서 인코딩하여 반환
         while True:
             flag, frame = cap.read()
             if not flag:
@@ -24,6 +26,7 @@ def getRtspStream(url):
             # 프레임이 있으면 버퍼로 인코딩
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
+            # yield로 반환
             yield (b'--PNPframe\r\n'
                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
             

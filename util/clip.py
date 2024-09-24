@@ -7,7 +7,10 @@ from datetime import datetime
 from collections import deque
 from service.location import read_with_cctv
 
+# 클립을 관리하는 클래스
 class ClipManager:
+
+    # 생성자
     def __init__(self, rtsp_url, fps=30):
         self.rtsp_url = rtsp_url
         self.fps = fps
@@ -21,6 +24,7 @@ class ClipManager:
         self.frame = None
         self.thread.start()
 
+    # 버퍼 업데이트
     def update_buffer(self):
         while True:
             ret, frame = self.cap.read()
@@ -34,6 +38,7 @@ class ClipManager:
                 self.recording_done_event.set()
             time.sleep(1 / self.fps)
 
+    # 녹화 시작
     def start_recording(self, message):
         occured_at = datetime.fromtimestamp(message['occurred_at'])
         filename = "%s_%s_%s" % (message["location"], message["event"], occured_at)
@@ -43,6 +48,7 @@ class ClipManager:
         self.recording_event.clear()
         self.recording_done_event.clear()
 
+    # 클립 저장
     def save_clip(self, filename):
         with self.lock:
             if len(self.buffer) < self.fps * 10:
@@ -61,10 +67,12 @@ class ClipManager:
             out.release()
             print(f"Clip saved as {filename}")
             os.system(f"ffmpeg -y -i ./static/clip/{filename}.mp4 -c:v libx264 -crf 0 ./static/clip/{filename}_h264.mp4")
-
+    
+    # 녹화 중지
     def stop(self):
         self.cap.release()
 
+# 클립 그룹 생성
 def clipGroup():
     print("Waiting for ClipManager...")
     clip_managers = {}

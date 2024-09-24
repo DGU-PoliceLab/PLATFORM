@@ -1,6 +1,7 @@
 from datetime import datetime
 from db.controller import MysqlDB
 
+# CCTV를 생성하는 함수
 def create(name, url):
     try:
         db = MysqlDB()
@@ -12,6 +13,7 @@ def create(name, url):
         print("Error occured in services.cctv.create",e)
         return False
 
+# CCTV를 조회하는 함수
 def read():
     try:
         db = MysqlDB()
@@ -22,6 +24,7 @@ def read():
     except Exception as e:
         print("Error occured in services.cctv.read",e)
 
+# CCTV를 조회하는 함수
 def check(name):
     try:
         db = MysqlDB()
@@ -35,6 +38,7 @@ def check(name):
     except Exception as e:
         print("Error occured in services.cctv.check_duplicate",e)
 
+# CCTV 정보를 업데이트하는 함수
 def update(target, name, url):
     try:
         db = MysqlDB()
@@ -47,6 +51,7 @@ def update(target, name, url):
         print("Error occured in services.cctv.update",e)
         return False
 
+# CCTV 정보를 삭제하는 함수
 def delete(target):
     try:
         db = MysqlDB()

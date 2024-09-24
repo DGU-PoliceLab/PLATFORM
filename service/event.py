@@ -1,5 +1,6 @@
 from db.controller import MysqlDB
 
+# 이벤트 유형을 생성하는 함수
 def create(e_type, name):
     try:
         db = MysqlDB()
@@ -9,6 +10,7 @@ def create(e_type, name):
     except Exception as e:
         print("Error occured in services.event.create",e)
 
+# 이벤트 유형을 조회하는 함수
 def read(target):
     try:
         db = MysqlDB()
@@ -24,6 +26,7 @@ def read(target):
     except Exception as e:
         print("Error occured in services.event.read",e)
 
+# 이벤트 유형을 업데이트하는 함수
 def update(target, e_type, name):
     try:
         db = MysqlDB()
@@ -33,6 +36,7 @@ def update(target, e_type, name):
     except Exception as e:
         print("Error occured in services.event.update",e)
 
+# 이벤트 유형을 삭제하는 함수
 def delete(target):
     try:
         db = MysqlDB()

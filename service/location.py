@@ -1,5 +1,6 @@
 from db.controller import MysqlDB
 
+# 유치실을 생성하는 함수
 def create(name, cctv):
     try:
         db = MysqlDB()
@@ -15,6 +16,7 @@ def create(name, cctv):
         print("Error occured in services.location.create",e)
         return False
 
+# 유치실을 조회하는 함수
 def read():
     try:
         db = MysqlDB()
@@ -26,6 +28,7 @@ def read():
         print("Error occured in services.location.read",e)
         return False
     
+# 유치실을 조회하는 함수
 def check(name):
     try:
         db = MysqlDB()
@@ -40,6 +43,7 @@ def check(name):
         print("Error occured in services.location.read",e)
         return False
 
+# 유치실을 CCTV정보와 함께 조회하는 함수
 def read_with_cctv():
     try:
         db = MysqlDB()
@@ -51,6 +55,7 @@ def read_with_cctv():
         print("Error occured in services.location.read",e)
         return False
 
+# 유치실 정보를 업데이트하는 함수
 def update(target, name, cctv):
     try:
         db = MysqlDB()
@@ -66,6 +71,7 @@ def update(target, name, cctv):
         print("Error occured in services.location.update",e)
         return False
 
+# 유치실 내 CCTV 정보를 업데이트하는 함수
 def update_cctv(target, cctv):
     try:
         db = MysqlDB()
@@ -77,6 +83,7 @@ def update_cctv(target, cctv):
         print("Error occured in services.location.update_cctv",e)
         return False
 
+# 유치실을 삭제하는 함수
 def delete(target):
     try:
         db = MysqlDB()
