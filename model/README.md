@@ -176,3 +176,33 @@ CCTV 삭제 요청 데이터형입니다.
     "target": 1
 }
 ```
+
+## Log Model
+
+### LogReadModel
+
+로그 조회 요청 데이터형입니다.
+
+-   datetime : List[String], 로그 생성 시각
+-   locations : List[String], 이벤트 발생 위치
+-   types : List[String], 발생 이벤트 유형
+
+```json
+{
+    "datetime": [],
+    "locations": [],
+    "types": []
+}
+```
+
+### LogCheckModel
+
+로그 확인 요청 데이터형입니다.
+
+-   target : int, 로그 ID
+
+```json
+{
+    "target": 1
+}
+```
