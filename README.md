@@ -59,37 +59,27 @@ MYSQL_CHARSET="utf8"
 
 # 실행
 
-### 모니터링
-
-서버의 상태 모니터링 및 데이터베이스 기록 기능을 실행합니다.
+폴리스랩 2.0 멀티뷰를 실행합니다.
 
 ```
-
-python monit.py
-
+hypercorn run:app -c hypercorn_config.py
 ```
 
--   Docker Desktop이 실행상태가 아니라면 자동으로 실행됩니다.(Windows만 지원)
-
-### 대시보드
-
-서버의 상태 시각화 기능을 실행합니다.
+or
 
 ```
-
-uvicorn main:app --reload
-
+bash run.sh
 ```
 
 다음 링크로 API Endpoint에 접속합니다.
 
-[API Endpoint](http://localhost:40000)
-또는 https://localhost:40000
+[API Endpoint](http://localhost)
+또는 https://localhost
 
 다음 링크로 API Docs에 접속합니다.
 
-[API Docs](http://localhost:40000/docs)
-또는 https://localhost:40000/docs
+[API Docs](http://localhost/docs)
+또는 https://localhost/docs
 
-[API Docs(redoc)](http://localhost:40000/redoc)
-또는 https://localhost:40000/redoc
+[API Docs(redoc)](http://localhost/redoc)
+또는 https://localhost/redoc
